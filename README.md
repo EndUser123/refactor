@@ -23,7 +23,7 @@ Transform large-scale refactoring from a risky manual process into a safe, autom
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/refactor-skill.git
+git clone https://github.com/EndUser123/refactor-skill.git
 cd refactor-skill
 
 # Create junction (Windows - no admin required)
@@ -37,7 +37,7 @@ ln -s "$(pwd)" ~/.claude/skills/refactor
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/refactor-skill.git
+git clone https://github.com/EndUser123/refactor-skill.git
 cd refactor-skill
 
 # Install in development mode
@@ -445,7 +445,7 @@ Contributions welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guideli
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/refactor-skill.git
+git clone https://github.com/EndUser123/refactor-skill.git
 cd refactor-skill
 
 # Create virtual environment
@@ -472,10 +472,10 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ## 🔗 Related Skills
 
-- **[/code](https://github.com/yourusername/code-skill)** - Feature development workflow
-- **[/arch](https://github.com/yourusername/arch-skill)** - Architecture advisor
-- **[/trace](https://github.com/yourusername/trace-skill)** - Code verification
-- **[/synergy](https://github.com/yourusername/synergy-skill)** - Cross-file pattern detection
+- **[/code](https://github.com/EndUser123/code-skill)** - Feature development workflow
+- **[/arch](https://github.com/EndUser123/arch-skill)** - Architecture advisor
+- **[/trace](https://github.com/EndUser123/trace-skill)** - Code verification
+- **[/synergy](https://github.com/EndUser123/synergy-skill)** - Cross-file pattern detection
 
 ## 📚 Changelog
 
