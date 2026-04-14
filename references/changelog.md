@@ -12,8 +12,8 @@
 - PHASE 4.7: Media Generation -- SKIPPED (requires NotebookLM auth)
 - PHASE 4.8: Interactive Course -- SKIPPED (requires NotebookLM auth)
 - PHASE 5: Portfolio Polish -- COMPLETED
-- PHASE 6: GitHub Publication -- COMPLETED
-- PHASE 7: Repository Finalization -- COMPLETED
+- PHASE 6: GitHub Publication -- SKIPPED (requires --publish flag)
+- PHASE 7: Repository Finalization -- SKIPPED (requires --finalize flag)
 - PHASE 8: Cleanup -- COMPLETED
 - PHASE 9: Git Ready -- COMPLETED
 - PHASE 10: Recruiter Readiness Validation -- COMPLETED
