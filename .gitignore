@@ -28,4 +28,4 @@ Thumbs.db
 
 # Evidence and state
 .evidence/
-.claude/state/
+.claude/

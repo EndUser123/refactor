@@ -1,0 +1,12 @@
+{
+  "name": "refactor",
+  "version": "1.0.0",
+  "description": "Multi-file refactoring orchestrator with TDD support for Claude Code",
+  "skills": [
+    {
+      "name": "refactor",
+      "path": "skills/refactor/SKILL.md",
+      "trigger": "/refactor"
+    }
+  ]
+}
