@@ -32,6 +32,50 @@ ln -s "$(pwd)" ~/.claude/skills/refactor
 
 The skill is accessed via `/refactor` in Claude Code.
 
+### Three Deployment Models
+
+**IMPORTANT**: This package supports three different deployment modes. Choose the right one for your use case.
+
+#### 1. SKILLS (Dev Deployment) ⭐ **Recommended for Development**
+
+**For**: When you're actively developing this package and want instant feedback.
+
+**Setup:**
+```powershell
+# Windows (Junction - No admin required)
+# For plugins with skills: Junction to the skills/ subdirectory
+
+# IMPORTANT: Sanitize the junction name to remove problematic characters
+$junctionName = "refactor" -replace '[@?*:<>|+]', ''
+
+New-Item -ItemType Junction -Path "P:\.claude\skills\$junctionName" -Target "P:\packages\refactor\skills\refactor"
+```
+
+**Key points:**
+- ✅ Edit in `P:/packages/refactor/`, changes work immediately
+- ✅ No reinstallation required - skills auto-discover from `P:/.claude/skills/`
+- ✅ Perfect for active development
+
+#### 2. HOOKS (Dev Deployment - Hook Files Only)
+
+**For**: When this package has hook files (`.py` files in `scripts/hooks/`) you want to test.
+
+**Setup:**
+```powershell
+# Symlink individual hook files to P:/.claude/hooks/
+cd P:/.claude/hooks
+cmd /c "mklink HookName.py P:/packages/refactor/scripts/hooks/HookName.py"
+```
+
+#### 3. PLUGINS (End User Deployment)
+
+**For**: Distributing this package to other users via marketplace or GitHub.
+
+**Setup:**
+```bash
+# End users install via /plugin command
+/plugin P:/packages/refactor
+```
 
 ## 🏗️ Architecture
 
