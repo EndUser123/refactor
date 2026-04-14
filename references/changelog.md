@@ -9,8 +9,8 @@
 - PHASE 3: Generate Templates -- COMPLETED
 - PHASE 4: Validate -- COMPLETED
 - PHASE 4.5: Code Review and Meta-Review -- COMPLETED
-- PHASE 4.7: Media Generation -- COMPLETED
-- PHASE 4.8: Interactive Course -- COMPLETED
+- PHASE 4.7: Media Generation -- SKIPPED (requires NotebookLM auth)
+- PHASE 4.8: Interactive Course -- SKIPPED (requires NotebookLM auth)
 - PHASE 5: Portfolio Polish -- COMPLETED
 - PHASE 6: GitHub Publication -- COMPLETED
 - PHASE 7: Repository Finalization -- COMPLETED
