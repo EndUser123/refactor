@@ -1,7 +1,7 @@
 # Changelog
 - PHASE 1: Diagnose and Prep -- COMPLETED
 - PHASE 1.5: Detect Package Type -- COMPLETED
-- PHASE 1.6: Brownfield Conversion -- SKIPPED (not brownfield-plugin)
+- PHASE 1.6: Brownfield Conversion -- N/A (not brownfield-plugin)
 - PHASE 1.6.5: Intentional Exception Registry -- COMPLETED
 - PHASE 1.7: Plugin Standards Validation -- COMPLETED
 - PHASE 1.8: Stale Location Cleanup and Junction/Symlink Setup -- COMPLETED
@@ -9,11 +9,12 @@
 - PHASE 3: Generate Templates -- COMPLETED
 - PHASE 4: Validate -- COMPLETED
 - PHASE 4.5: Code Review and Meta-Review -- COMPLETED
-- PHASE 4.7: Media Generation -- SKIPPED (requires NotebookLM auth)
-- PHASE 4.8: Interactive Course -- SKIPPED (requires NotebookLM auth)
+- PHASE 4.7: Media Generation -- COMPLETED (NotebookLM: infographic + slides generated, video status unknown)
+- PHASE 4.8: Interactive Course -- COMPLETED (docs/refactor_course.html created)
 - PHASE 5: Portfolio Polish -- COMPLETED
 - PHASE 6: GitHub Publication -- SKIPPED (requires --publish flag)
 - PHASE 7: Repository Finalization -- SKIPPED (requires --finalize flag)
 - PHASE 8: Cleanup -- COMPLETED
 - PHASE 9: Git Ready -- COMPLETED
 - PHASE 10: Recruiter Readiness Validation -- COMPLETED
+- PHASE 4.6: Quality Scanning -- COMPLETED
