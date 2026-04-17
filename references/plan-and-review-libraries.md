@@ -1,6 +1,6 @@
 # Plan and Review Libraries
 
-**Location**: `lib/refactor_plan.py`, `lib/plan_review.py`
+**Location**: `scripts/refactor_plan.py`, `scripts/plan_review.py`
 
 **Purpose**: Create and review refactoring plans before any code changes.
 

@@ -170,7 +170,7 @@ When synergy-type=modernize (deprecated API updates), invoke `/context7` before 
 
 All TDD phases use `src.core.evidence_collector`. See `references/evidence-and-validation.md` for full details including sequential enforcement, dead code detection, and quality gate patterns.
 
-Evidence stored in `P:\.evidence/` (subdirectories: `commands/`, `tests/`, `files/`, `state/`, `refactor/`).
+Evidence stored in `P:/.claude/.artifacts/{terminal_id}/refactor/` (subdirectories: `commands/`, `tests/`, `files/`, `state/`, `refactor/`).
 
 ## TDD Checkpoint
 

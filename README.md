@@ -136,7 +136,7 @@ refactor/
 | **TestGenerator** | TDD orchestration | RED → GREEN → REFACTOR phases, test result tracking |
 | **SynergyDetector** | Cross-file analysis | DRY violation detection, extraction opportunity finding |
 | **ComplexityTriage** | Risk prioritization | Cyclomatic complexity scoring, priority levels (P0-P3) |
-| **StateManager** | Incremental progress | Thread-safe state persistence, atomic writes |
+| **StateManager** | Incremental progress | Terminal-isolated state persistence, atomic writes |
 
 ## 📖 Usage
 
@@ -152,7 +152,7 @@ Invoke the refactor skill from Claude Code:
 /refactor --files src/**/*.py
 
 # Enable incremental mode
-/refactor --incremental --state-file .refactor-state.json
+/refactor --incremental --state-file P:/.claude/state/refactor/refactor_<terminal_id>.json
 
 # Custom complexity threshold
 /refactor --cc-threshold 20
@@ -167,15 +167,15 @@ from __csf.src.refactor import (
     TestGenerator,
     SynergyDetector,
     ComplexityTriage,
-    StateManager,
     get_config,
 )
+from scripts import StateManager
 
 # Load configuration
 config = get_config(
     cc_threshold=20,
     incremental_mode=True,
-    state_file=Path(".refactor-state.json")
+    state_file=None  # uses the terminal-isolated default path
 )
 
 # Initialize components
@@ -183,7 +183,7 @@ rollback_mgr = RollbackManager(branch_name="refactor-safety")
 test_gen = TestGenerator()
 synergy_detector = SynergyDetector(min_similarity=0.75)
 complexity_triage = ComplexityTriage(cc_threshold=20)
-state_mgr = StateManager(config.state_file)
+state_mgr = StateManager()
 
 # Example: Rollback workflow
 rollback_plan = rollback_mgr.capture_state(
@@ -248,7 +248,7 @@ Current coverage: **[Coverage badge after CI run]**
 Options:
   --cc-threshold INT       Cyclomatic complexity threshold (default: 15)
   --incremental            Enable incremental refactoring mode
-  --state-file PATH        State file for incremental mode
+  --state-file PATH        State file for incremental mode (defaults to terminal-isolated path)
   --min-similarity FLOAT   Minimum similarity for synergy detection (default: 0.7)
   --config-file PATH       YAML/JSON configuration file
   --help                   Show help message
@@ -267,7 +267,7 @@ risk_weight: 1.0
 # Incremental mode
 incremental:
   enabled: true
-  state_file: .refactor-state.json
+  state_file: null  # defaults to the terminal-isolated path
 
 # Synergy detection
 synergy:
@@ -390,7 +390,7 @@ for score in scores:
 Resumable multi-session refactoring with state persistence:
 
 ```python
-mgr = StateManager(state_file=Path(".refactor-state.json"))
+mgr = StateManager()
 
 # Load previous state
 state = mgr.load_state()

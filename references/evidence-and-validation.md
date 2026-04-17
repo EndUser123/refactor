@@ -44,9 +44,10 @@ All artifacts stored in `P:\.evidence/` — subdirectories: `commands/`, `tests/
 
 **Integration pattern:**
 ```python
-from terminal_detection import detect_terminal_id
+from scripts.state_manager import StateManager
 
-state_file = f"P:/.claude/state/refactor_{detect_terminal_id()}.json"
+state_mgr = StateManager()
+state_file = str(state_mgr.state_file)
 # Track phase: 'discovery', 'prioritization', 'constitutional_filter', 'red', 'refactor'
 ```
 
